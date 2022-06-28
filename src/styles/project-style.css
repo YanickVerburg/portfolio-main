@@ -1,0 +1,250 @@
+:root {
+    --primary: #66FCF1;
+    --secondary: #45A29E;
+    --light: white;
+    --dark: #1F2833;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background: var(--dark);
+    font-family: 'Montserrat', sans-serif;
+    animation-name: background-animation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+/* Animated Background */
+@keyframes background-animation {
+    0% {
+		background: #1F2833;
+	}
+	25% {
+		background: #2F3C4C;
+	}
+	50% {
+		background: #3E5065;
+	}
+	75% {
+		background: #2F3C4C;
+	}
+	100% {
+		background: #1F2833;
+	}
+}
+
+/* BASE STYLES */
+h1,h2,h3,p {
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 2em;
+    color: var(--primary);
+}
+
+p {
+    font-size: 1em;
+    color: var(--light);
+}
+
+h3 {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* NAV */
+.nav-bar {
+    overflow: hidden;
+}
+
+/* Single Project Page */
+.project-wrapper {
+    display: grid;
+    float: left;
+    grid-template-columns: 1fr;
+    padding-top: 5em;
+    gap: 1em;
+}
+
+.img-div {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.project-wrapper p {
+    float: left;
+    border-left: 3px solid var(--secondary);
+    padding-left: .5em;
+    margin-left: 2.5em;
+    margin-right: .5em;
+}
+
+.project-wrapper img {
+    border: 5px solid var(--secondary);
+    border-radius: 50px;
+    width: 50vw;
+}
+
+.project-wrapper img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.project-wrapper button {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 0.4em;
+    margin-top: 5%;
+}
+
+.project-wrapper button:hover {
+    background-color: var(--primary);
+    color: var(--light);
+    transform: scale(1.1);
+    transition: 0.2s;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.project-wrapper .git-icon {
+    font-size: 5em;
+    color: var(--secondary);
+}
+
+.project-wrapper .git-icon:hover {
+    color: var(--primary);
+}
+
+.center {
+    text-align: center;
+}
+
+/* Views Styling */
+h2 {
+    padding-left: 3.5em;
+    font-size: 1.4em;
+}
+
+.view-icon {
+    font-size: 5em;
+    color: var(--secondary);
+}
+
+.view-icon:hover {
+    color: var(--primary);
+}
+
+.date {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.skills i{
+    color: var(--secondary);
+    margin-left: .1em;
+    margin-right: .1em;
+    margin-top: .5em;
+    font-size: 2em;
+}
+
+
+/* Smaller Screen Mobile */
+@media only screen and (min-width: 408px) {
+
+    
+    h2 {
+        padding-left: 3.5em;
+        font-size: 1.4em;
+    }
+}
+
+/* Small Screen Mobile */
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+
+    .project-wrapper img {
+        width: 30vw;
+    } 
+
+    .project-wrapper {
+        margin-left: 4.5em;
+        margin-right: 4.5em;
+    }
+
+    .view-icon {
+        padding-left: .2em;
+    }
+
+    h2 {
+        padding-left: 4.5em;
+    }
+
+}
+
+/* Large Screen Mobile */
+@media only screen and (min-width: 960px) {
+    body {
+        font-size: 20px;
+    }
+    .project-wrapper img {
+        width: 25vw;
+    }
+
+    .project-wrapper {
+        margin-left: 4.5em;
+        margin-right: 4.5em;
+    }
+
+}
+
+/* Desktop Screen */
+@media only screen and (min-width: 1000px) {
+    body {
+        font-size: 20px;
+    }
+    .project-wrapper img {
+        width: 20vw;
+    }
+
+    .project-wrapper {
+        display: grid;
+        float: left;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 5em;
+        gap: 1em;
+        margin-left: 5.5em;
+        margin-right: 5.5em;
+    }
+
+}
+
+/* Larger Desktop Screen - Grid */
+@media only screen and (min-width: 1200px) {
+    .project-wrapper img {
+        width: 15vw;
+    }
+
+    .project-wrapper {
+        margin-left: 6em;
+        margin-right: 6em;
+    }
+}
